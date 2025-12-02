@@ -2,9 +2,10 @@
   "name": "restocare",
   "version": "0.1.0",
   "private": true,
-  "lint-staged": {
-  "**/*.{js,jsx,ts,tsx}": ["eslint --fix"]
-},
+  
+    "lint-staged": {
+    "*.{js,ts,tsx}": "eslint --max-warnings=0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
