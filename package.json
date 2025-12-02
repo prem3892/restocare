@@ -2,7 +2,7 @@
   "name": "restocare",
   "version": "0.1.0",
   "private": true,
- "lint-staged": {
+  "lint-staged": {
   "**/*.{js,jsx,ts,tsx}": ["eslint --fix"]
 },
   "scripts": {
@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "16.0.6",
@@ -24,7 +24,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.6",
-    "husky": "^8.0.3",
+    "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "tailwindcss": "^4",
     "typescript": "^5"
