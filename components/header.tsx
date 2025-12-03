@@ -4,17 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../app/assets/logo.png';
 import { MenuIcon, X } from 'lucide-react';
+import { navItems } from '@/variant/header.variant';
 
 export const Navbar = () => {
-  const navItems = [
-    { label: 'Home', slug: '#' },
-    { label: 'Why Restro Care', slug: '#' },
-    { label: 'How It Works', slug: '#' },
-    { label: 'Testimonials', slug: '#' },
-    { label: 'FAQs', slug: '#' },
-    { label: 'Raise a Ticket', slug: '#' },
-  ];
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
