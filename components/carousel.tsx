@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import hero1 from '../app/assets/hero1.png';
+import hero1 from '../app/assets/hero2.avif';
 import { Pagination, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -28,26 +28,26 @@ export const Carousel = () => {
       >
         {CarouselData.map((data, idx) => (
           <SwiperSlide className="relative w-full h-full" key={idx}>
-            <Image src={hero1} fill className="object-cover opacity-50" alt="image" />
+            <Image src={hero1} fill className="object-cover " alt="image" fetchPriority={'high'} />
             <div
               className="
-    absolute
-    top-1/2 left-1/3
-    -translate-x-1/2 -translate-y-1/2
-    
-    w-[90%] max-w-xl
-    bg-[#00000066]
-    rounded-md
-    shadow-[0_0_10px_2px_rgba(255,255,255,0.6)]
-    p-4
-    flex flex-col gap-4
-  "
+      absolute
+      top-1/2 left-1/2 sm:left-1/3
+      -translate-x-1/2 -translate-y-1/2
+      
+      w-[90%] sm:w-[50%] md:w-[60%] lg:w-[60%] xl:max-w-xl
+      bg-[#00000066]
+      rounded-md
+      shadow-[0_0_10px_2px_rgba(255,255,255,0.6)]
+      p-3 sm:p-4 md:p-5 lg:p-6
+      flex flex-col gap-3 sm:gap-4
+    "
             >
               <div>
                 <Typography
                   text={data.heroHeading}
                   element="h2"
-                  className="text-2xl md:text-4xl leading-snug md:leading-relaxed"
+                  className="text-white text-xl sm:text-xl md:text-2xl lg:text-3xl :text-4xl leading-snug md:leading-relaxed"
                 />
               </div>
 
@@ -55,20 +55,20 @@ export const Carousel = () => {
                 <Typography
                   text={data.heroSubHeading}
                   element="p"
-                  className="text-base md:text-lg"
+                  className="text-white text-sm sm:text-base md:text-lg"
                 />
               </div>
 
-              <div className="flex items-center justify-center sm:justify-start">
+              <div className="text-white flex items-center justify-center sm:justify-start mt-1 sm:mt-0">
                 <Typography
                   text={data.heroButton}
                   element="button"
                   className="
-        rounded-xl
-        border-2 border-white
-        px-4 py-2
-        text-sm md:text-base
-      "
+          rounded-xl
+          border-2 border-white
+          px-3 py-1.5 sm:px-4 sm:py-2
+          text-xs sm:text-sm md:text-base
+        "
                 />
               </div>
             </div>

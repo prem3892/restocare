@@ -15,7 +15,7 @@ export const Navbar = () => {
 
   return (
     <nav className="w-full bg-white">
-      <div className="max-w-7xl flex mx-auto px-4 justify-between items-center h-16">
+      <div className="max-w-7xl flex mx-auto px-8 justify-between items-center h-16">
         <div className="img-container shrink-0 w-12">
           <Image src={Logo} alt="logo image" />
         </div>
