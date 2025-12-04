@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../app/assets/logo.png';
@@ -13,8 +13,30 @@ export const Navbar = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // When user scrolls down 20px, make it sticky
+      if (window.scrollY > 20) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // CLEANUP – remove event listener
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="w-full bg-white">
+    <nav
+      className={`w-full bg-white  ${
+        isSticky ? 'fixed top-0 left-0 w-full shadow-lg bg-white z-50' : 'relative'
+      }`}
+    >
       <div className="max-w-7xl flex mx-auto px-8 justify-between items-center h-16">
         <div className="img-container shrink-0 w-12">
           <Image src={Logo} alt="logo image" />
@@ -31,7 +53,7 @@ export const Navbar = () => {
         </div>
 
         <button
-          className="nav-btn flex md:hidden items-center cursor-pointer"
+          className="nav-btn right-1/10 flex md:hidden items-center cursor-pointer absolute"
           onClick={() => {
             toggleMobileMenu();
           }}
@@ -45,7 +67,7 @@ export const Navbar = () => {
       </div>
 
       <div
-        className={`md:hidden ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5 pointer-events-none'} absolute top-16 left-0 w-full bg-white shadow-lg px-4 pb-4 nav-items items-center transition-all duration-300`}
+        className={`md:hidden ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5 pointer-events-none'} absolute top-16 left-0 w-full bg-white shadow-lg px-4 pb-4 nav-items items-center transition-all duration-300 z-50`}
       >
         <ul className="flex flex-col text-base font-medium text-black gap-2 pt-3">
           {navItems.map((item, idx) => (
