@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import hero1 from '../app/assets/hero2.avif';
+import hero1 from '../app/assets/hero2.png';
 import { Pagination, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -23,12 +23,20 @@ export const Carousel = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
+        loop={true}
         modules={[Pagination, Autoplay]}
         className="w-full h-full"
       >
         {CarouselData.map((data, idx) => (
           <SwiperSlide className="relative w-full h-full" key={idx}>
-            <Image src={hero1} fill className="object-cover " alt="image" fetchPriority={'high'} />
+            <Image
+              src={hero1}
+              fill
+              className="object-cover "
+              alt="image"
+              fetchPriority={'high'}
+              priority
+            />
             <div
               className="
       absolute
