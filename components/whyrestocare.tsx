@@ -7,13 +7,18 @@ import { Typography } from '@/typography/typography';
 
 export const WhyRestoCare = () => {
   return (
+    // flex min-h-fit sm:flex-row flex-col gap-[clamp(8px,50vw,80px) sm:gap-[clamp(8px,40vw,70px)]
+    //   justify-center items-center
+    // py-6
+    // lg:min-h-[60vh]
     <section
-      className="flex min-h-screen sm:flex-row flex-col gap-[clamp(8px,10vw,32px)]
-      justify-center items-center not-sm:
-    bg-white
+      className="
+      flex flex-col md:flex-row bg-white py-6
+      gap-10
+      items-center
     "
     >
-      <div className="why-resto-left flex-1 flex justify-start items-center max-w-full sm:max-w-3/7">
+      <div className="why-resto-left pb-3 sm:pb-0 flex-1 flex sm:justify-center justify-center items-center max-w-full sm:max-w-3/7">
         <div className="flex flex-col gap-[clamp(8px,2vw,24px)] relative w-fit h-fit">
           <Image
             src={whyrestoimg1}
@@ -34,19 +39,19 @@ export const WhyRestoCare = () => {
         </div>
       </div>
 
-      <div className="why-resto-right max-w-8/10 sm:max-w-3/7 flex flex-1 flex-col gap-[clamp(8px,1vw,24px)] justify-center items-center">
+      <div className="why-resto-right max-w-8/10 sm:max-w-3/7 flex flex-1 flex-col gap-[clamp(8px,1vw,24px)] justify-start sm:justify-start items-center">
         <Typography
           text={WhyRestoCareData.heading}
           element="h2"
-          className="text-[clamp(16px,2vw,20px)] font-semibold
+          className="text-[clamp(16px,2vw,25px)] font-semibold
         text-[#C00404] text-center
-        sm:text-start
+        sm:text-center
         "
         />
         <Typography
           text={WhyRestoCareData.subHeading}
           element="h3"
-          className="text-[clamp(18px,2vw,28px)] opacity-80
+          className="text-[clamp(18px,2vw,40px)] opacity-80
         text-[#000000]
         text-center
         font-semibold
@@ -56,7 +61,7 @@ export const WhyRestoCare = () => {
         <Typography
           text={WhyRestoCareData.para}
           element="p"
-          className="text-[clamp(14px,2vw,18px)] leading-relaxed
+          className="text-[clamp(14px,2vw,24px)] leading-relaxed
         text-[#000000]
         "
         />
