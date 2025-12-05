@@ -11,7 +11,7 @@ import Profile from '../app/assets/Testimonial/Profile.png';
 export default function Testimonial() {
   return (
     <div className="px-4 md:px-30 lg:px-40 py-5 space-y-2 bg-gray-200">
-      <h1 className="text-red-500 text-lg md:text-xl font-semibold text-center">Testimonial</h1>
+      <h1 className="text-red-600 text-lg md:text-xl font-semibold text-center">Testimonial</h1>
       <h1 className="text-black text-xl md:text-2xl font-bold text-center">
         Happy Client Says About Us
       </h1>
