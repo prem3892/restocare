@@ -38,7 +38,7 @@ export const WhyRestoCare = () => {
         <Typography
           text={WhyRestoCareData.heading}
           element="h2"
-          className="text-[clamp(12px,3vw,25px)] font-semibold
+          className="text-[clamp(16px,2vw,20px)] font-semibold
         text-[#C00404] text-center
         sm:text-start
         "
