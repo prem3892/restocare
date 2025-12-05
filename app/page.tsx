@@ -1,6 +1,7 @@
 import Testimonial from '@/components/testimonial';
 import { Carousel } from '../components/carousel';
 import { Navbar } from '../components/header';
+import { WhyRestoCare } from '@/components/whyrestocare';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Navbar />
       {/* </nav> */}
       <Carousel />
+      <WhyRestoCare />
       <Testimonial />
       <div className="p-6">hello next app</div>
     </>
