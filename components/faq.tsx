@@ -39,7 +39,7 @@ function Faq() {
   };
 
   return (
-    <div className="bg-gray-200 py-10 flex flex-col items-center space-y-10">
+    <div className="bg-gray-200 py-5 flex flex-col items-center space-y-10">
       <div className="w-full text-center">
         <h1 className="text-red-600 text-lg md:text-xl font-semibold">FAQs</h1>
         <h1 className="text-black text-xl md:text-2xl font-semibold">Frequently Asked Questions</h1>

@@ -10,7 +10,7 @@ import Profile from '../app/assets/Testimonial/Profile.png';
 
 export default function Testimonial() {
   return (
-    <div className="w-full bg-gray-200 flex justify-center py-10">
+    <div className="w-full bg-gray-200 flex justify-center py-5">
       <div className="w-full md:w-7/8 p-4 space-y-2 ">
         <h1 className="text-red-600 text-lg md:text-xl font-semibold text-center">Testimonial</h1>
         <h1 className="text-black text-xl md:text-2xl font-bold text-center">
