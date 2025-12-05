@@ -45,7 +45,7 @@ function Faq() {
         <h1 className="text-black text-xl md:text-2xl font-semibold">Frequently Asked Questions</h1>
       </div>
 
-      <div className="w-full md:w-7/8 px-4 space-y-4">
+      <div className="w-full md:w-7/8 px-4 space-y-4 text-black">
         {faqs.map((item, index) => {
           const isOpen = openIndex === index;
 
