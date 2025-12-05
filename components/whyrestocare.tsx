@@ -16,6 +16,7 @@ export const WhyRestoCare = () => {
       flex flex-col md:flex-row bg-white py-6
       gap-10
       items-center
+      2xl:min-h-[60vh]
     "
     >
       <div className="why-resto-left pb-3 sm:pb-0 flex-1 flex sm:justify-center justify-center items-center max-w-full sm:max-w-3/7">
