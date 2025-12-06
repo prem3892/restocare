@@ -1,4 +1,3 @@
-import Testimonial from '@/components/testimonial';
 import { Carousel } from '../components/carousel';
 import { Navbar } from '../components/header';
 import { WhyRestoCare } from '@/components/whyrestocare';
@@ -13,7 +12,7 @@ export default function Home() {
       <Carousel />
       <WhyRestoCare />
       <HowItWorks />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <div className="p-6">hello next app</div>
     </>
   );

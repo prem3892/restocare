@@ -1,10 +1,13 @@
 import { NavbarType } from '@/types/header.type';
 
-export const navItems: NavbarType[] = [
-  { label: 'Home', slug: '#' },
-  { label: 'Why Restro Care', slug: '#' },
-  { label: 'How It Works', slug: '#' },
-  { label: 'Testimonials', slug: '#' },
-  { label: 'FAQs', slug: '#' },
-  { label: 'Raise a Ticket', slug: '#' },
-];
+export const navItems: NavbarType = {
+  items: [
+    { label: 'Home', slug: '#' },
+    { label: 'Why Restro Care', slug: '#' },
+    { label: 'How It Works', slug: '#' },
+    { label: 'Testimonials', slug: '#' },
+    { label: 'FAQs', slug: '#' },
+    { label: 'Raise a Ticket', slug: '#' },
+  ],
+  logo: '/header/logo.png',
+};

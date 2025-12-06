@@ -1,4 +1,7 @@
 export interface NavbarType {
-  label: string;
-  slug: string;
+  items: {
+    label: string;
+    slug: string;
+  }[];
+  logo: string;
 }

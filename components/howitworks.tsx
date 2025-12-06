@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export const HowItWorks = () => {
   return (
-    <section className="bg-[#F5F6F6] text-[#000000] py-6 flex justify-center items-center flex-col gap-5">
+    <section className="bg-[#F5F6F6] text-[#000000] py-3 flex justify-center items-center flex-col gap-5">
       <header className="pb-5 flex flex-col items-center">
         <Typography
           text={HowItWorksData.heading}

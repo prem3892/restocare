@@ -1,8 +1,5 @@
 import Image from 'next/image';
-import whyrestoimg1 from '../app/assets/why-resto-img-1.png';
-import whyrestoimg2 from '../app/assets/why-resto-img-2.png';
 import { WhyRestoCareData } from '@/variant/whyrestocare.variant';
-import whyrestotick from '../app/assets/why-resto-tick-img.png';
 import { Typography } from '@/typography/typography';
 
 export const WhyRestoCare = () => {
@@ -13,30 +10,33 @@ export const WhyRestoCare = () => {
     // lg:min-h-[60vh]
     <section
       className="
-      flex flex-col md:flex-row bg-white py-6
+      flex flex-col md:flex-row py-3
       gap-10
+      bg-white
       items-center
-      2xl:min-h-[60vh]
+      
+      
     "
     >
-      <div className="why-resto-left pb-3 sm:pb-0 flex-1 flex sm:justify-center justify-center items-center max-w-full sm:max-w-3/7">
-        <div className="flex flex-col gap-[clamp(8px,2vw,24px)] relative w-fit h-fit">
+      <div className="why-resto-left pb-3 sm:pb-0 flex-1 flex sm:justify-center justify-center items-center sm:max-w-3/7  relative">
+        <div className="relative inline-block">
           <Image
-            src={whyrestoimg1}
+            src={WhyRestoCareData.img[0]}
             alt="main"
-            className="w-[clamp(200px,25vw,500px)] rounded-3xl shadow-lg"
+            className="rounded-3xl shadow-lg w-52 md:w-44 lg:w-64"
+            width={100}
+            height={100}
           />
 
-          <Image
-            src={whyrestoimg2}
-            alt="overlap"
-            className="
-    absolute bottom-0 right-0
-    w-[clamp(150px,20vw,360px)]
-    translate-x-[30%] translate-y-[30%]
-    rounded-3xl shadow-xl
-  "
-          />
+          <div className="relative -mt-[20%] w-fit h-fit left-[40%]">
+            <Image
+              src={WhyRestoCareData.img[1]}
+              alt="overlap"
+              className="rounded-3xl shadow-xl w-40 md:w-36 lg:w-56"
+              width={100}
+              height={100}
+            />
+          </div>
         </div>
       </div>
 
@@ -74,8 +74,8 @@ export const WhyRestoCare = () => {
         >
           {WhyRestoCareData.bullets.map((point, idx) => (
             <li key={idx} className="flex items-center gap-2">
-              <Image src={whyrestotick} alt="tick-img"></Image>
-              <Typography text={point} element="p" className="" />
+              <Image src={point.img} alt="tick-img" width={20} height={20}></Image>
+              <Typography text={point.text} element="p" className="" />
             </li>
           ))}
         </ul>
