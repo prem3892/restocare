@@ -34,7 +34,7 @@ export const NeedSupport = () => {
           <Typography
             text={NeedSupportData.para}
             element="p"
-            className="text-base sm:text-xl text-justify"
+            className="text-base sm:text-xl text-justify sm:text-center"
           />
         </div>
         <div
