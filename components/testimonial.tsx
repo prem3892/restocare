@@ -6,7 +6,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Quote } from 'lucide-react';
-import Profile from '../app/assets/Testimonial/Profile.png';
 
 export default function Testimonial() {
   return (
@@ -56,7 +55,7 @@ export default function Testimonial() {
                 <div className="flex items-center gap-3 mt-5">
                   <div className="bg-gray-300 size-12 rounded-full">
                     <Image
-                      src={Profile}
+                      src="/Testimonial/Profile.png"
                       alt="User"
                       width={48}
                       height={48}
