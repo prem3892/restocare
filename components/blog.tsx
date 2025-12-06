@@ -14,7 +14,17 @@ function Blog() {
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col"
             >
               <div className="relative w-full h-40">
-                <Image src={blog.img} alt={blog.title} fill className="object-cover" />
+                <div className="relative w-full h-40">
+                  <Image
+                    src={blog.img}
+                    alt={blog.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw,
+           (max-width: 1024px) 50vw,
+           33vw"
+                  />
+                </div>
               </div>
 
               <div className="p-6 flex flex-col justify-between flex-1">
