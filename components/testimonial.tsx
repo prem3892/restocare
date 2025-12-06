@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Quote } from 'lucide-react';
+import Profile from '/testimonial/Profile.png';
 
 export default function Testimonial() {
   return (
