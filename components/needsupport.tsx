@@ -34,7 +34,7 @@ export const NeedSupport = () => {
           <Typography
             text={NeedSupportData.para}
             element="p"
-            className="text-base sm:text-xl text-justify cursor-pointer"
+            className="text-base sm:text-xl text-justify"
           />
         </div>
         <div
@@ -49,6 +49,7 @@ export const NeedSupport = () => {
           text-sm
           sm:text-base
           px-3 py-4 rounded-lg text-white
+          cursor-pointer
           "
           />
         </div>
