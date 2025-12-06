@@ -1,3 +1,4 @@
+import { Typography } from '@/typography/typography';
 import { navItems } from '@/variant/header.variant';
 import {
   Instagram,
@@ -13,7 +14,7 @@ import Image from 'next/image';
 function Subfooter() {
   return (
     <section className="bg-gray-200 py-5 space-y-5 text-black">
-      <div className="w-[95%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="w-[95%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pl-5">
         {/* Brand */}
         <div>
           <Image
@@ -24,85 +25,117 @@ function Subfooter() {
             className="w-auto h-auto"
           />
 
-          <h1 className="text-xl font-semibold mt-3 text-black">Resto Care</h1>
-          <p className="mt-2 text-sm text-black leading-relaxed">
-            Dedicated to providing professional staff services that keep your restaurant running
-            smoothly.
-          </p>
+          <Typography
+            element="h1"
+            text="Resto Care"
+            className="text-xl font-semibold mt-3 text-black"
+          />
+
+          <Typography
+            element="p"
+            text="Dedicated to providing professional staff services that keep your restaurant running smoothly."
+            className="mt-2 text-sm text-black leading-relaxed"
+          />
         </div>
 
         {/* Office Address */}
         <div>
-          <h2 className="text-lg font-semibold text-black mb-3">Office Address</h2>
+          <Typography
+            element="h2"
+            text="Office Address"
+            className="text-lg font-semibold text-black mb-3"
+          />
 
           <div className="flex items-start gap-3 mb-3">
             <MapPinned size={30} />
-            <p className="text-sm">
-              212, Pearls Best Height - 1 Netaji Subhash Place, Pitampura, Delhi-110034
-            </p>
+            <Typography
+              element="p"
+              text="212, Pearls Best Height - 1 Netaji Subhash Place, Pitampura, Delhi-110034"
+              className="text-sm"
+            />
           </div>
 
           <div className="flex items-start gap-3 mb-3">
             <MailOpen size={15} />
-            <p className="text-sm">restocare.socials@gmail.com</p>
+            <Typography element="p" text="restocare.socials@gmail.com" className="text-sm" />
           </div>
 
           <div className="flex items-start gap-3">
             <PhoneCall size={15} />
-            <p className="text-sm">+91 9899300646</p>
+            <Typography element="p" text="+91 9899300646" className="text-sm" />
           </div>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h2 className="text-lg font-semibold text-black mb-3">Quick Links</h2>
+          <Typography
+            element="h2"
+            text="Quick Links"
+            className="text-lg font-semibold text-black mb-3"
+          />
+
           <div className="space-y-2">
             {navItems.items.map((item, index) => (
-              <p
+              <Typography
                 key={index}
+                element="p"
+                text={item.label}
                 className="cursor-pointer text-sm hover:text-red-500 transition-colors"
-              >
-                {item.label}
-              </p>
+              />
             ))}
           </div>
         </div>
 
         {/* Social Links */}
         <div>
-          <h2 className="text-lg font-semibold text-black mb-3">Follow Us</h2>
+          <Typography
+            element="h2"
+            text="Follow Us"
+            className="text-lg font-semibold text-black mb-3"
+          />
 
           <div className="flex flex-col gap-3 text-sm">
-            <div className="flex items-center gap-3 hover:text-red-500 transition-colors cursor-pointer">
-              <Facebook size={15} />
-              <p>Facebook</p>
-            </div>
-
-            <div className="flex items-center gap-3 hover:text-red-500 transition-colors cursor-pointer">
-              <Instagram size={15} />
-              <p>Instagram</p>
-            </div>
-
-            <div className="flex items-center gap-3 hover:text-red-500 transition-colors cursor-pointer">
-              <Linkedin size={15} />
-              <p>LinkedIn</p>
-            </div>
-
-            <div className="flex items-center gap-3 hover:text-red-500 transition-colors cursor-pointer">
-              <Twitter size={15} />
-              <p>Twitter</p>
-            </div>
+            {[
+              { icon: Facebook, label: 'Facebook' },
+              { icon: Instagram, label: 'Instagram' },
+              { icon: Linkedin, label: 'LinkedIn' },
+              { icon: Twitter, label: 'Twitter' },
+            ].map(({ icon: Icon, label }, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-3 hover:text-red-500 transition-colors cursor-pointer"
+              >
+                <Icon size={15} />
+                <Typography element="p" text={label} className="text-sm" />
+              </div>
+            ))}
           </div>
         </div>
       </div>
+
+      {/* Bottom Section */}
       <div className="border-t border-gray-400 flex justify-between items-center pt-4 w-[95%] mx-auto flex-col md:flex-row gap-3">
-        <p className="text-center text-sm text-black">© 2025 Resto Care. All rights reserved.</p>
+        <Typography
+          element="p"
+          text="© 2025 Resto Care. All rights reserved."
+          className="text-center text-sm text-black"
+        />
+
         <div className="text-center text-sm text-black flex flex-col md:flex-row gap-3">
-          <p>Privacy Policy</p>
-          <p>Cancellation & Refund Policy</p>
-          <p>Terms & Conditions</p>
-          <p>Modifications to Terms</p>
-          <p>Guidelines</p>
+          {[
+            'Privacy Policy',
+            'Cancellation & Refund Policy',
+            'Terms & Conditions',
+            'Modifications to Terms',
+            'Guidelines',
+          ].map((item, i) => (
+            <Typography
+              key={i}
+              element="p"
+              text={item}
+              className="cursor-pointer hover:text-red-500 transition-colors"
+            />
+          ))}
         </div>
       </div>
     </section>
