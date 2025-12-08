@@ -44,6 +44,7 @@ export const ContactForm = () => {
           id="name"
           type="text"
           placeholder=""
+          required
           value={formData.name}
           onChange={handleChange}
           className="w-full p-3 rounded bg-gray-200"
@@ -57,6 +58,7 @@ export const ContactForm = () => {
         <input
           id="email"
           type="email"
+          required
           value={formData.email}
           onChange={handleChange}
           className="w-full p-3 rounded bg-gray-200"
