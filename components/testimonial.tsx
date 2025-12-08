@@ -1,4 +1,5 @@
 'use client';
+
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
@@ -6,16 +7,24 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Quote } from 'lucide-react';
-import Profile from '/testimonial/Profile.png';
+import { Typography } from '@/typography/typography';
 
 export default function Testimonial() {
   return (
     <div className="w-full bg-gray-200 flex justify-center py-5">
       <div className="w-full md:w-7/8 p-4 space-y-2 ">
-        <h1 className="text-red-600 text-lg md:text-xl font-semibold text-center">Testimonial</h1>
-        <h1 className="text-black text-xl md:text-2xl font-bold text-center">
-          Happy Client Says About Us
-        </h1>
+        {/* Heading */}
+        <Typography
+          element="h1"
+          text="Testimonial"
+          className="text-red-600 text-lg md:text-xl font-semibold text-center"
+        />
+
+        <Typography
+          element="h1"
+          text="Happy Client Says About Us"
+          className="text-black text-xl md:text-2xl font-bold text-center"
+        />
 
         <Swiper
           spaceBetween={30}
@@ -47,12 +56,14 @@ export default function Testimonial() {
                   <Quote className="text-white size-6" />
                 </div>
 
-                <p className="mt-6 text-gray-700 leading-relaxed">
-                  &quot;RestoCare transformed our restaurant&apos;s online presence. Their expertise
-                  in digital marketing helped us reach a wider audience and boost our reservations
-                  significantly.&quot;
-                </p>
+                {/* Testimonial Text */}
+                <Typography
+                  element="p"
+                  text={`"RestoCare transformed our restaurant's online presence. Their expertise in digital marketing helped us reach a wider audience and boost our reservations significantly."`}
+                  className="mt-6 text-gray-700 leading-relaxed"
+                />
 
+                {/* User Info */}
                 <div className="flex items-center gap-3 mt-5">
                   <div className="bg-gray-300 size-12 rounded-full">
                     <Image
@@ -63,9 +74,19 @@ export default function Testimonial() {
                       className="rounded-full object-cover"
                     />
                   </div>
+
                   <div>
-                    <h2 className="text-black font-semibold text-lg">Prakash Mani</h2>
-                    <p className="text-sm text-gray-600">Web Developer</p>
+                    <Typography
+                      element="h2"
+                      text="Prakash Mani"
+                      className="text-black font-semibold text-lg"
+                    />
+
+                    <Typography
+                      element="p"
+                      text="Web Developer"
+                      className="text-sm text-gray-600"
+                    />
                   </div>
                 </div>
               </div>

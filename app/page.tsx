@@ -5,7 +5,7 @@ import { HowItWorks } from '@/components/howitworks';
 import Testimonial from '@/components/testimonial';
 import Faq from '@/components/faq';
 import Blog from '@/components/blog';
-import { NeedSupport } from '@/components/needsupport';
+import Subfooter from '@/components/subfooter';
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <Testimonial />
       <Faq />
       <Blog />
-      <NeedSupport />
+      <Subfooter />
     </>
   );
 }
