@@ -1,3 +1,4 @@
+import Video from '@/components/video';
 import dynamic from 'next/dynamic';
 
 const Navbar = dynamic(() => import('../components/header'), { ssr: true });
@@ -16,6 +17,7 @@ export default function Home() {
       <Carousel />
       <WhyRestoCare />
       <HowItWorks />
+      <Video />
       <Testimonial />
       <Faq />
       <Blog />
