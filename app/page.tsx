@@ -10,6 +10,7 @@ const Blog = dynamic(() => import('@/components/blog'), { ssr: true });
 const Subfooter = dynamic(() => import('@/components/subfooter'), { ssr: true });
 // const OurCompany = dynamic(() => import('@/components/ourcompany'), { ssr: true });
 import { OurCompany } from '@/components/ourcompany';
+import { LetsTalk } from '@/components/letstalk';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Blog />
       <Subfooter />
       <OurCompany />
+      <LetsTalk />
     </>
   );
 }
