@@ -18,7 +18,6 @@ export default function Home() {
       <Faq />
       <Blog />
       <Subfooter />
-      <div className="p-6">hello next app</div>
     </>
   );
 }

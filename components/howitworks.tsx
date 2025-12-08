@@ -7,7 +7,7 @@ import Image from 'next/image';
 export const HowItWorks = () => {
   return (
     <section className="bg-[#F5F6F6] text-[#000000] py-3 flex justify-center items-center flex-col gap-5">
-      <header className="pb-5 flex flex-col items-center">
+      <div className="pb-5 flex flex-col items-center">
         <Typography
           text={HowItWorksData.heading}
           element="h2"
@@ -18,7 +18,7 @@ export const HowItWorks = () => {
           element="h4"
           className="text-[#616060] text-center max-w-[80%]"
         />
-      </header>
+      </div>
       <article className="w-full flex flex-wrap justify-center gap-10 pt-5">
         {HowItWorksData.process.map((item, idx) => (
           <div
