@@ -8,6 +8,11 @@ const Testimonial = dynamic(() => import('@/components/testimonial'));
 const Faq = dynamic(() => import('@/components/faq'));
 const Blog = dynamic(() => import('@/components/blog'), { ssr: true });
 const Subfooter = dynamic(() => import('@/components/subfooter'), { ssr: true });
+// const OurCompany = dynamic(() => import('@/components/ourcompany'), { ssr: true });
+import { OurCompany } from '@/components/ourcompany';
+import { LetsTalk } from '@/components/letstalk';
+import { OurClients } from '@/components/ourclients';
+import { NeedSupport } from '@/components/needsupport';
 
 export default function Home() {
   return (
@@ -20,6 +25,10 @@ export default function Home() {
       <Faq />
       <Blog />
       <Subfooter />
+      <NeedSupport />
+      <OurCompany />
+      <LetsTalk />
+      <OurClients />
     </>
   );
 }

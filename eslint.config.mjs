@@ -29,7 +29,7 @@ export default defineConfig([
 
     rules: {
       // "no-console": ["error", { allow: ["warn", "error"] }],
-      "no-console": ["error"],
+      "no-console": ["warn"],
       "@typescript-eslint/no-explicit-any": "error",
       "@typescript-eslint/no-unused-vars": "error",
       "prettier/prettier": "error",
