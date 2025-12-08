@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { WhyRestoCareData } from '@/variant/whyrestocare.variant';
 import { Typography } from '@/typography/typography';
 
-export const WhyRestoCare = () => {
+const WhyRestoCare = () => {
   return (
     // flex min-h-fit sm:flex-row flex-col gap-[clamp(8px,50vw,80px) sm:gap-[clamp(8px,40vw,70px)]
     //   justify-center items-center
@@ -89,3 +89,5 @@ export const WhyRestoCare = () => {
     </section>
   );
 };
+
+export default WhyRestoCare;

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { MenuIcon, X } from 'lucide-react';
 import { navItems } from '@/variant/header.variant';
 
-export const Navbar = () => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -82,3 +82,5 @@ export const Navbar = () => {
     </nav>
   );
 };
+
+export default Navbar;
