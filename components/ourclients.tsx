@@ -1,4 +1,5 @@
 import { OurClientData } from '@/variant/ourclient.variant';
+import { Count } from './ui/count';
 
 export const OurClients = () => {
   return (
@@ -9,7 +10,10 @@ export const OurClients = () => {
           {OurClientData.map((item, idx) => (
             <div className="flex flex-col justify-start m-2 lg:m-6" key={idx}>
               <p className="text-2xl font-bold leading-none lg:text-4xl text-[#C00404]">
-                {item.value}
+                <Count end={item.value} />
+                {item.label ? (item.label.includes('Years') ? '+' : '') : ''}
+                {item.label ? (item.label.includes('Clients') ? '+' : '') : ''}
+                {item.label ? (item.label.includes('Followers') ? 'K+' : '') : ''}
               </p>
               <p className="text-sm sm:text-base ">{item.label}</p>
             </div>

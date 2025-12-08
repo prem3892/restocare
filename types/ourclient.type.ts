@@ -1,4 +1,4 @@
 export type OurClientType = {
-  value: string;
+  value: number;
   label: string;
 }[];
