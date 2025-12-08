@@ -4,7 +4,7 @@ import { HowItWorksData } from '@/variant/howitworks.variant';
 // import male from '../app/assets/why-resto-img-1.png';
 import Image from 'next/image';
 
-export const HowItWorks = () => {
+const HowItWorks = () => {
   return (
     <section className="bg-[#F5F6F6] text-[#000000] py-3 flex justify-center items-center flex-col gap-5">
       <div className="pb-5 flex flex-col items-center">
@@ -42,3 +42,5 @@ export const HowItWorks = () => {
     </section>
   );
 };
+
+export default HowItWorks;

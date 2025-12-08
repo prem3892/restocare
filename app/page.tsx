@@ -1,11 +1,13 @@
-import { Carousel } from '../components/carousel';
-import { Navbar } from '../components/header';
-import { WhyRestoCare } from '@/components/whyrestocare';
-import { HowItWorks } from '@/components/howitworks';
-import Testimonial from '@/components/testimonial';
-import Faq from '@/components/faq';
-import Blog from '@/components/blog';
-import Subfooter from '@/components/subfooter';
+import dynamic from 'next/dynamic';
+
+const Navbar = dynamic(() => import('../components/header'), { ssr: true });
+const Carousel = dynamic(() => import('../components/carousel'));
+const WhyRestoCare = dynamic(() => import('@/components/whyrestocare'), { ssr: true });
+const HowItWorks = dynamic(() => import('@/components/howitworks'), { ssr: true });
+const Testimonial = dynamic(() => import('@/components/testimonial'));
+const Faq = dynamic(() => import('@/components/faq'));
+const Blog = dynamic(() => import('@/components/blog'), { ssr: true });
+const Subfooter = dynamic(() => import('@/components/subfooter'), { ssr: true });
 
 export default function Home() {
   return (
