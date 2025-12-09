@@ -1,5 +1,7 @@
 'use client';
 
+import { Typography } from '@/typography/typography';
+
 export default function Video() {
   return (
     <div className="w-full bg-white py-10">
@@ -11,23 +13,28 @@ export default function Video() {
 
         {/* Content Section */}
         <div className="space-y-5">
-          <h1 className="text-2xl md:text-4xl text-center md:text-start font-bold text-gray-900">
-            Our Booking Process
-          </h1>
-
-          <p className="text-gray-600 leading-relaxed max-w-md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel malesuada lorem.
-            Suspendisse potenti.
-          </p>
-
+          <Typography
+            element="h1"
+            text=" Our Booking Process"
+            className="text-2xl md:text-4xl text-center md:text-start font-bold text-gray-900"
+          />
+          <Typography
+            element="p"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel malesuada lorem.
+            Suspendisse potenti."
+            className="text-gray-600 leading-relaxed max-w-md"
+          />
           <div className="flex gap-3 mt-6 justify-center md:justify-start">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 md:px-6 py-3 rounded-lg font-medium shadow">
-              Visit Website
-            </button>
-
-            <button className="border border-blue-600 text-sm px-3 text-blue-600 hover:bg-blue-50 md:px-6 py-3 rounded-lg font-medium shadow">
-              Download App
-            </button>
+            <Typography
+              element="button"
+              text=" Visit Website"
+              className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 md:px-6 py-3 rounded-lg font-medium shadow"
+            />
+            <Typography
+              element="button"
+              text=" Download App"
+              className="border border-blue-600 text-sm px-3 text-blue-600 hover:bg-blue-50 md:px-6 py-3 rounded-lg font-medium shadow"
+            />
           </div>
         </div>
       </div>

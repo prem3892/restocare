@@ -4,86 +4,102 @@ import { Typography } from '@/typography/typography';
 
 const WhyRestoCare = () => {
   return (
-    // flex min-h-fit sm:flex-row flex-col gap-[clamp(8px,50vw,80px) sm:gap-[clamp(8px,40vw,70px)]
-    //   justify-center items-center
-    // py-6
-    // lg:min-h-[60vh]
     <section
       className="
-      flex flex-col md:flex-row py-3
-      gap-10
-      bg-white
-      items-center
-      
-      
-    "
+        flex flex-col md:flex-row 
+        py-10
+        bg-gray-100
+        items-center gap-10
+      "
     >
-      <div className="why-resto-left pb-3 sm:pb-0 flex-1 flex sm:justify-center justify-center items-center sm:max-w-3/7  relative">
-        <div className="relative inline-block">
-          <Image
-            src={WhyRestoCareData.img[0]}
-            alt="main"
-            className="rounded-3xl shadow-lg w-52 md:w-44 lg:w-64"
-            width={100}
-            height={100}
-          />
+      {/* LEFT IMAGE SECTION */}
+      <div className="w-full md:w-1/2 flex justify-center items-center">
+        <div className="relative size-100 md:size-[420px]">
+          {/* IMAGE 1 — TOP LEFT */}
+          <div className="absolute top-0 left-0 z-10">
+            <Image
+              src={WhyRestoCareData.img[0]}
+              alt="main"
+              width={300}
+              height={300}
+              className="
+                rounded-xl size-80
+              "
+            />
+          </div>
 
-          <div className="relative -mt-[20%] w-fit h-fit left-[40%]">
+          {/* IMAGE 2 — BOTTOM RIGHT */}
+          <div className="absolute bottom-0 right-0 z-20">
             <Image
               src={WhyRestoCareData.img[1]}
               alt="overlap"
-              className="rounded-3xl shadow-xl w-40 md:w-36 lg:w-56"
-              width={100}
-              height={100}
+              width={300}
+              height={300}
+              className="
+                rounded-lg size-60 md:size-65
+              "
             />
           </div>
         </div>
       </div>
 
-      <div className="why-resto-right max-w-8/10 sm:max-w-3/7 flex flex-1 flex-col gap-[clamp(8px,1vw,24px)] justify-start sm:justify-start items-center">
+      {/* RIGHT TEXT SECTION */}
+      <div className="w-full md:w-1/2 flex flex-col gap-4 px-4 sm:px-6 md:px-0">
         <Typography
           text={WhyRestoCareData.heading}
           element="h2"
-          className="text-[clamp(16px,2vw,25px)] font-semibold
-        text-[#C00404] text-center
-        sm:text-center
-        "
+          className="
+            text-[clamp(18px,2vw,26px)]
+            font-semibold
+            text-[#C00404]
+            text-center md:text-start
+          "
         />
+
         <Typography
           text={WhyRestoCareData.subHeading}
           element="h3"
-          className="text-[clamp(18px,2vw,40px)] opacity-80
-        text-[#000000]
-        text-center
-        font-semibold
-        sm:text-start
-        "
+          className="
+            text-[clamp(22px,2.5vw,40px)]
+            font-semibold 
+            text-black
+            opacity-90
+            text-center md:text-start
+          "
         />
+
         <Typography
           text={WhyRestoCareData.para}
           element="p"
-          className="text-[clamp(14px,2vw,24px)] leading-relaxed
-        text-[#000000]
-        "
+          className="
+            text-[clamp(14px,1.6vw,20px)]
+            leading-relaxed
+            text-gray-700
+            text-center md:text-start
+          "
         />
 
-        <ul
-          className="flex flex-col items-start gap-[clamp(4px,1vw,12px)] text-[clamp(14px,2vw,18px)]
-        text-[#616060]
-        "
-        >
+        <ul className="flex flex-col gap-2 mt-2">
           {WhyRestoCareData.bullets.map((point, idx) => (
-            <li key={idx} className="flex items-center gap-2">
-              <Image src={point.img} alt="tick-img" width={20} height={20}></Image>
-              <Typography text={point.text} element="p" className="" />
+            <li key={idx} className="flex items-start gap-3">
+              <Image src={point.img} alt="tick" width={20} height={20} />
+              <Typography
+                text={point.text}
+                element="p"
+                className="text-[clamp(14px,1.5vw,18px)] text-gray-600"
+              />
             </li>
           ))}
         </ul>
+
         <Typography
           text={WhyRestoCareData.outro}
           element="p"
-          className="text-[clamp(14px,2vw,18px)] italic
-        text-[#616060]"
+          className="
+            text-[clamp(14px,1.5vw,18px)]
+            italic text-gray-600 mt-3
+            text-center md:text-start
+          "
         />
       </div>
     </section>
