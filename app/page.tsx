@@ -1,3 +1,4 @@
+import { NeedSupport } from '@/components/needsupport';
 import Video from '@/components/video';
 import dynamic from 'next/dynamic';
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Testimonial />
       <Faq />
       <Blog />
+      <NeedSupport />
       <Subfooter />
     </>
   );
