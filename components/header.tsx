@@ -4,9 +4,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { MenuIcon, X } from 'lucide-react';
 import { navItems } from '@/variant/header.variant';
+import Getintouchform from './form/getintouchform';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showForm, setShowForm] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -31,55 +33,98 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={`w-full bg-white  ${
-        isSticky ? 'fixed top-0 left-0 w-full shadow-lg bg-white z-50' : 'relative'
-      }`}
-    >
-      <div className="max-w-7xl flex mx-auto px-8 justify-between items-center h-16">
-        <div className="img-container shrink-0 w-12">
-          <Image src={navItems.logo} alt="logo image" width={100} height={100} />
+    <>
+      <nav
+        className={`w-full bg-white  ${
+          isSticky ? 'fixed top-0 left-0 w-full shadow-lg bg-white z-50' : 'relative'
+        }`}
+      >
+        <div className="max-w-7xl flex mx-auto px-8 justify-between items-center h-16">
+          <div className="img-container shrink-0 w-12">
+            <Image src={navItems.logo} alt="logo image" width={100} height={100} />
+          </div>
+
+          <div className="hidden md:flex items-center gap-6">
+            {navItems.items.map((item, idx) =>
+              item.label === 'Raise a Ticket' ? (
+                <button
+                  onClick={() => setShowForm(true)}
+                  key={idx}
+                  className="
+                  bg-[#C00404] text-white font-medium 
+                  py-2 px-4 rounded-lg 
+                  hover:bg-[#a00303] transition
+                "
+                >
+                  Raise a Ticket
+                </button>
+              ) : (
+                <Link
+                  key={idx}
+                  href={item.slug}
+                  className="
+                  text-black font-medium 
+                  hover:text-[#C00404] transition
+                "
+                >
+                  {item.label}
+                </Link>
+              ),
+            )}
+          </div>
+
+          <button
+            className="nav-btn right-1/10 flex md:hidden items-center cursor-pointer absolute"
+            onClick={() => {
+              toggleMobileMenu();
+            }}
+          >
+            {isMenuOpen ? (
+              <X className="text-black"></X>
+            ) : (
+              <MenuIcon className="text-black"></MenuIcon>
+            )}
+          </button>
         </div>
 
-        <div className={`nav-container hidden md:flex items-center`}>
-          <ul className="flex gap-4 md:gap-6 lg:gap-8 md:text-base text-sm font-medium text-black">
-            {navItems.items.map((item, idx) => (
-              <li className="cursor-pointer" key={idx}>
-                <Link href={item.slug}>{item.label}</Link>
-              </li>
-            ))}
+        <div
+          className={`md:hidden ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5 pointer-events-none'} absolute top-16 left-0 w-full bg-white shadow-lg px-4 pb-4 nav-items items-center transition-all duration-300 z-50`}
+        >
+          <ul className="flex flex-col text-base font-medium text-black gap-2 pt-3">
+            {navItems.items.map((item, idx) =>
+              item.label === 'Raise a Ticket' ? (
+                <button
+                  onClick={() => {
+                    (setShowForm(true), setIsMenuOpen(false));
+                  }}
+                  key={idx}
+                  className="
+                  bg-[#C00404] text-white py-2 rounded-lg
+                  hover:bg-[#a00303] transition
+                "
+                >
+                  Raise a Ticket
+                </button>
+              ) : (
+                <Link
+                  key={idx}
+                  href={item.slug}
+                  className="py-1 border-b border-gray-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ),
+            )}
           </ul>
         </div>
-
-        <button
-          className="nav-btn right-1/10 flex md:hidden items-center cursor-pointer absolute"
-          onClick={() => {
-            toggleMobileMenu();
-          }}
-        >
-          {isMenuOpen ? (
-            <X className="text-black"></X>
-          ) : (
-            <MenuIcon className="text-black"></MenuIcon>
-          )}
-        </button>
-      </div>
-
-      <div
-        className={`md:hidden ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5 pointer-events-none'} absolute top-16 left-0 w-full bg-white shadow-lg px-4 pb-4 nav-items items-center transition-all duration-300 z-50`}
-      >
-        <ul className="flex flex-col text-base font-medium text-black gap-2 pt-3">
-          {navItems.items.map((item, idx) => (
-            <li className="flex flex-col justify-between cursor-pointer" key={idx}>
-              <Link href={item.slug} className="py-1">
-                {item.label}
-              </Link>
-              <hr className="text-gray-500 py-1" />
-            </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
+      </nav>
+      {showForm && (
+        <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
+          <Getintouchform setShowForm={setShowForm} />
+        </div>
+      )}
+    </>
   );
 };
 
