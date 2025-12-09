@@ -34,11 +34,8 @@ export default function Getintouchform({ setShowForm }: { setShowForm: (v: boole
 
   const validate = (): FormErrors => {
     const newErrors: FormErrors = {};
-
-    if (!formData.name.trim()) newErrors.name = 'Name is required';
     if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
     if (!formData.email.trim()) newErrors.email = 'Email is required';
-    if (!formData.message.trim()) newErrors.message = 'Message cannot be empty';
 
     return newErrors;
   };
@@ -80,7 +77,6 @@ export default function Getintouchform({ setShowForm }: { setShowForm: (v: boole
             onChange={handleChange}
             className="w-full px-4 py-2 rounded-lg border border-gray-500 focus:ring-2 focus:ring-blue-500"
           />
-          {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
 
           <input
             name="phone"
@@ -113,7 +109,6 @@ export default function Getintouchform({ setShowForm }: { setShowForm: (v: boole
           onChange={handleChange}
           className="w-full px-4 py-2 rounded-lg border border-gray-500 focus:ring-2 focus:ring-blue-500 resize-none"
         ></textarea>
-        {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
 
         {/* Submit Button */}
         <button
