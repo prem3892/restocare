@@ -6,9 +6,9 @@ const Testimonial = dynamic(() => import('@/components/testimonial'));
 const Faq = dynamic(() => import('@/components/faq'));
 const Blog = dynamic(() => import('@/components/blog'), { ssr: true });
 const Subfooter = dynamic(() => import('@/components/subfooter'), { ssr: true });
-import { OurCompany } from '@/components/ourcompany';
+// import { OurCompany } from '@/app/aboutus/ourcompany';
 import { LetsTalk } from '@/components/letstalk';
-import { OurClients } from '@/components/ourclients';
+// import { OurClients } from '@/components/ourclients';
 import { NeedSupport } from '@/components/needsupport';
 import Video from '@/components/video';
 import dynamic from 'next/dynamic';
@@ -25,6 +25,7 @@ export default function Home() {
       <Testimonial />
       <Faq />
       <Blog />
+      <LetsTalk />
       <NeedSupport />
       <Subfooter />
       <OurCompany />
