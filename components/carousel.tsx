@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { CarouselData } from '@/variant/carousel.variant';
 import { Typography } from '@/typography/typography';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import Getintouchform from './form/getintouchform';
 
 const Carousel = () => {
@@ -98,4 +98,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default memo(Carousel);

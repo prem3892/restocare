@@ -3,6 +3,7 @@ import { HowItWorksData } from '@/variant/howitworks.variant';
 // import { male } from '@app/assets/.male.png'
 // import male from '../app/assets/why-resto-img-1.png';
 import Image from 'next/image';
+import { memo } from 'react';
 
 const HowItWorks = () => {
   return (
@@ -43,4 +44,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks;
+export default memo(HowItWorks);

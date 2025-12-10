@@ -1,7 +1,8 @@
 import { LetsTalkData } from '@/variant/letstalk.variant';
 import { ContactForm } from './contactform';
+import { memo } from 'react';
 
-export const LetsTalk = () => {
+export default memo(function LetsTalk() {
   return (
     <div className="space-y-12 bg-gray-100 text-black">
       <div className="grid max-w-7xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
@@ -23,4 +24,4 @@ export const LetsTalk = () => {
       </div>
     </div>
   );
-};
+});

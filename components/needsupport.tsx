@@ -1,10 +1,10 @@
 'use client';
 import { Typography } from '@/typography/typography';
 import { NeedSupportData } from '@/variant/needsupport.variant';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import Getintouchform from './form/getintouchform';
 
-export const NeedSupport = () => {
+export default memo(function NeedSupport() {
   const [showForm, setShowForm] = useState(false);
 
   return (
@@ -45,4 +45,4 @@ export const NeedSupport = () => {
       )}
     </div>
   );
-};
+});
