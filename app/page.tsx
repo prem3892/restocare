@@ -10,6 +10,7 @@ import { LetsTalk } from '@/components/letstalk';
 import { NeedSupport } from '@/components/needsupport';
 import Video from '@/components/video';
 import dynamic from 'next/dynamic';
+import Offer from '@/components/offer';
 
 export default function Home() {
   return (

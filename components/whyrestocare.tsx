@@ -13,34 +13,16 @@ const WhyRestoCare = () => {
       "
     >
       {/* LEFT IMAGE SECTION */}
-      <div className="w-full md:w-1/2 flex justify-center items-center">
-        <div className="relative size-100 md:size-[420px]">
-          {/* IMAGE 1 — TOP LEFT */}
-          <div className="absolute top-0 left-0 z-10">
-            <Image
-              src={WhyRestoCareData.img[0]}
-              alt="main"
-              width={300}
-              height={300}
-              className="
-                rounded-xl size-80
-              "
-            />
-          </div>
-
-          {/* IMAGE 2 — BOTTOM RIGHT */}
-          <div className="absolute bottom-0 right-0 z-20">
-            <Image
-              src={WhyRestoCareData.img[1]}
-              alt="overlap"
-              width={300}
-              height={300}
-              className="
-                rounded-lg size-60 md:size-65
-              "
-            />
-          </div>
-        </div>
+      <div className="w-full md:w-1/2 flex justify-center items-center px-4">
+        <Image
+          src={WhyRestoCareData.img[0]}
+          alt="main"
+          width={300}
+          height={300}
+          priority
+          fetchPriority="high"
+          className="rounded-lg"
+        />
       </div>
 
       {/* RIGHT TEXT SECTION */}
