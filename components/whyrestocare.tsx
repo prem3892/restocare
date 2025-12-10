@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { WhyRestoCareData } from '@/variant/whyrestocare.variant';
 import { Typography } from '@/typography/typography';
+import { memo } from 'react';
 
 const WhyRestoCare = () => {
   return (
@@ -88,4 +89,4 @@ const WhyRestoCare = () => {
   );
 };
 
-export default WhyRestoCare;
+export default memo(WhyRestoCare);

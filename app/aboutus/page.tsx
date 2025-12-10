@@ -1,4 +1,3 @@
-import React from 'react';
 import { OurCompanyData } from '@/variant/ourcompany.variant';
 import { OurClientData } from '@/variant/ourclient.variant';
 import { Count } from '@/components/ui/count';
