@@ -12,6 +12,7 @@ import { OurClients } from '@/components/ourclients';
 import { NeedSupport } from '@/components/needsupport';
 import Video from '@/components/video';
 import dynamic from 'next/dynamic';
+import Offer from '@/components/offer';
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <OurCompany />
       <LetsTalk />
       <OurClients />
+      <Offer />
     </>
   );
 }
