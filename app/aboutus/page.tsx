@@ -3,6 +3,9 @@ import { OurCompanyData } from '@/variant/ourcompany.variant';
 import { OurClientData } from '@/variant/ourclient.variant';
 import { Count } from '@/components/ui/count';
 import Navbar from '@/components/header';
+import { NeedSupport } from '@/components/needsupport';
+import Subfooter from '@/components/subfooter';
+import Offer from '@/components/offer';
 
 const page = () => {
   return (
@@ -49,6 +52,10 @@ const page = () => {
           </div>
         </section>
       </div>
+
+      <Offer />
+      <NeedSupport />
+      <Subfooter />
     </>
   );
 };

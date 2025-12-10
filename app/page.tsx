@@ -8,7 +8,6 @@ const Blog = dynamic(() => import('@/components/blog'), { ssr: true });
 const Subfooter = dynamic(() => import('@/components/subfooter'), { ssr: true });
 import { LetsTalk } from '@/components/letstalk';
 import { NeedSupport } from '@/components/needsupport';
-import Video from '@/components/video';
 import dynamic from 'next/dynamic';
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <Carousel />
       <WhyRestoCare />
       <HowItWorks />
-      <Video />
       <Testimonial />
       <Faq />
       <Blog />
