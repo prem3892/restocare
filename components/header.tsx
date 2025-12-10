@@ -75,15 +75,10 @@ const Navbar = () => {
 
           <button
             className="nav-btn right-1/10 flex md:hidden items-center cursor-pointer absolute"
-            onClick={() => {
-              toggleMobileMenu();
-            }}
+            onClick={toggleMobileMenu}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
-            {isMenuOpen ? (
-              <X className="text-black"></X>
-            ) : (
-              <MenuIcon className="text-black"></MenuIcon>
-            )}
+            {isMenuOpen ? <X className="text-black" /> : <MenuIcon className="text-black" />}
           </button>
         </div>
 
