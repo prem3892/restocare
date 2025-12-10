@@ -1,5 +1,6 @@
 import HowItWorks from '@/components/howitworks';
-import { NeedSupport } from '@/components/needsupport';
+import Needsupport from '@/components/needsupport';
+
 import Video from '@/components/video';
 
 const page = () => {
@@ -7,7 +8,7 @@ const page = () => {
     <>
       <HowItWorks />
       <Video />
-      <NeedSupport />
+      <Needsupport />
     </>
   );
 };
