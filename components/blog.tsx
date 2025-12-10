@@ -1,6 +1,7 @@
 import { Typography } from '@/typography/typography';
 import { BlogData } from '@/variant/blog.variant';
 import Image from 'next/image';
+import { memo } from 'react';
 
 function Blog() {
   return (
@@ -69,4 +70,4 @@ function Blog() {
   );
 }
 
-export default Blog;
+export default memo(Blog);

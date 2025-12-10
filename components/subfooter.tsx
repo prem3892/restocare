@@ -10,6 +10,7 @@ import {
   Facebook,
 } from 'lucide-react';
 import Image from 'next/image';
+import { memo } from 'react';
 
 function Subfooter() {
   return (
@@ -136,4 +137,4 @@ function Subfooter() {
   );
 }
 
-export default Subfooter;
+export default memo(Subfooter);

@@ -8,8 +8,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Quote } from 'lucide-react';
 import { Typography } from '@/typography/typography';
+import { memo } from 'react';
 
-export default function Testimonial() {
+export default memo(function Testimonial() {
   return (
     <div className="w-full bg-gray-200 flex justify-center py-5">
       <div className="w-full md:w-7/8 p-4 space-y-2 ">
@@ -99,4 +100,4 @@ export default function Testimonial() {
       </div>
     </div>
   );
-}
+});

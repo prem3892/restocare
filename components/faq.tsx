@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { faqs } from '@/variant/faq.variant';
 import { Typography } from '@/typography/typography';
@@ -80,4 +80,4 @@ function Faq() {
   );
 }
 
-export default Faq;
+export default memo(Faq);
