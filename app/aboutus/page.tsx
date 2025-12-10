@@ -2,15 +2,12 @@ import React from 'react';
 import { OurCompanyData } from '@/variant/ourcompany.variant';
 import { OurClientData } from '@/variant/ourclient.variant';
 import { Count } from '@/components/ui/count';
-import Navbar from '@/components/header';
 import { NeedSupport } from '@/components/needsupport';
-import Subfooter from '@/components/subfooter';
 import Offer from '@/components/offer';
 
 const page = () => {
   return (
     <>
-      <Navbar />
       {/* our company */}
       <div className="space-y-12 bg-gray-100 dark:text-black">
         {/* our company page */}
@@ -55,7 +52,6 @@ const page = () => {
 
       <Offer />
       <NeedSupport />
-      <Subfooter />
     </>
   );
 };

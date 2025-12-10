@@ -14,26 +14,26 @@ export const NeedSupport = () => {
           <Typography
             text={NeedSupportData.heading}
             element="h1"
-            className="font-medium text-[18px] sm:text-[22px]"
+            className="font-medium text-[18px] sm:text-xl text-red-600"
           />
 
           <Typography
             text={NeedSupportData.subHeading}
             element="h3"
-            className="font-semibold text-[20px] sm:text-[38px]"
+            className="font-semibold text-[20px] md:text-2xl"
           />
 
           <Typography
             text={NeedSupportData.para}
             element="p"
-            className="text-base sm:text-xl text-justify sm:text-center"
+            className="text-base sm:text-lg text-justify sm:text-center"
           />
 
           <Typography
             text={NeedSupportData.button}
             element="button"
             onClick={() => setShowForm(true)}
-            className="bg-[#C00404] font-semibold text-sm sm:text-base px-4 py-3 rounded-lg text-white cursor-pointer"
+            className="bg-[#C00404] font-semibold text-sm sm:text-base px-5 py-2 rounded-lg text-white cursor-pointer"
           />
         </div>
       </section>
