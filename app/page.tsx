@@ -1,4 +1,6 @@
 import dynamic from 'next/dynamic';
+import Letstalk from '@/components/letstalk';
+import Needsupport from '@/components/needsupport';
 const Navbar = dynamic(() => import('../components/header'), { ssr: true });
 const Carousel = dynamic(() => import('../components/carousel'));
 const WhyRestoCare = dynamic(() => import('@/components/whyrestocare'), { ssr: true });
@@ -7,8 +9,6 @@ const Testimonial = dynamic(() => import('@/components/testimonial'));
 const Faq = dynamic(() => import('@/components/faq'));
 const Blog = dynamic(() => import('@/components/blog'), { ssr: true });
 const Subfooter = dynamic(() => import('@/components/subfooter'), { ssr: true });
-import { LetsTalk } from '@/components/letstalk';
-import { NeedSupport } from '@/components/needsupport';
 
 export default function Home() {
   return (
@@ -20,8 +20,8 @@ export default function Home() {
       <Testimonial />
       <Faq />
       <Blog />
-      <LetsTalk />
-      <NeedSupport />
+      <Letstalk />
+      <Needsupport />
       <Subfooter />
     </>
   );
