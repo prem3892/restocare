@@ -1,7 +1,7 @@
 import { WhyRestoCareType } from '@/types/whyrestocare.type';
 
 export const WhyRestoCareData: WhyRestoCareType = {
-  img: ['/whyrestocare/1.png', '/whyrestocare/2.png'],
+  img: ['/whyrestocare/1.jpg'],
 
   heading: 'Why Resto Care ?',
   subHeading: 'Because restaurants deserve to thrive, not struggle.',

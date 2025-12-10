@@ -18,8 +18,8 @@ const WhyRestoCare = () => {
         <Image
           src={WhyRestoCareData.img[0]}
           alt="main"
-          width={300}
-          height={300}
+          width={400}
+          height={400}
           priority
           fetchPriority="high"
           className="rounded-lg"

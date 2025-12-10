@@ -1,7 +1,7 @@
 import { Typography } from '@/typography/typography';
 import { BlogData } from '@/variant/blog.variant';
 import Image from 'next/image';
-import { memo } from 'react';
+import Link from 'next/link';
 
 function Blog() {
   return (
@@ -50,11 +50,13 @@ function Blog() {
                 </div>
 
                 {/* Button + Date */}
-                <div className="mt-4">
-                  <button className="text-red-500 text-md font-medium hover:underline flex items-center gap-1">
-                    {blog.button} <span>»</span>
-                  </button>
 
+                <div className="mt-4">
+                  <Link href="/blog">
+                    <button className="text-red-500 text-md font-medium hover:underline flex items-center gap-1">
+                      {blog.button} <span>»</span>
+                    </button>
+                  </Link>
                   <Typography
                     element="p"
                     text={blog.date}
