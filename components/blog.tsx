@@ -2,6 +2,7 @@ import { Typography } from '@/typography/typography';
 import { BlogData } from '@/variant/blog.variant';
 import Image from 'next/image';
 import Link from 'next/link';
+import { memo } from 'react';
 
 function Blog() {
   return (
