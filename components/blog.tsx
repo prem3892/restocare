@@ -40,13 +40,13 @@ function Blog() {
                   <Typography
                     element="h3"
                     text={blog.title}
-                    className="text-md md:text-lg font-semibold text-gray-900"
+                    className="text-md md:text-lg font-semibold text-gray-800"
                   />
 
                   <Typography
                     element="p"
                     text={blog.content}
-                    className="text-gray-500 text-sm line-clamp-3"
+                    className="text-gray-800 text-sm line-clamp-3"
                   />
                 </div>
 
@@ -54,14 +54,14 @@ function Blog() {
 
                 <div className="mt-4">
                   <Link href="/blog">
-                    <button className="text-red-500 text-md font-medium hover:underline flex items-center gap-1">
+                    <button className="text-red-800 text-md font-medium hover:underline flex items-center gap-1">
                       {blog.button} <span>»</span>
                     </button>
                   </Link>
                   <Typography
                     element="p"
                     text={blog.date}
-                    className="text-gray-400 text-xs border-t pt-1 mt-1"
+                    className="text-gray-800 text-xs border-t pt-1 mt-1"
                   />
                 </div>
               </div>

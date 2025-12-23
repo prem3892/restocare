@@ -18,7 +18,7 @@ function Faq() {
         <Typography
           element="h1"
           text="FAQs"
-          className="text-red-600 text-lg md:text-xl font-semibold"
+          className="text-red-800 text-lg md:text-xl font-semibold"
         />
 
         <Typography
