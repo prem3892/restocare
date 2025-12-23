@@ -16,7 +16,7 @@ const HowItWorks = () => {
         />
         <Typography
           text={HowItWorksData.subHeading}
-          element="h4"
+          element="h3"
           className="text-[#616060] text-center max-w-[80%]"
         />
       </div>

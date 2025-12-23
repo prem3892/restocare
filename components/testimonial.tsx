@@ -18,7 +18,7 @@ export default memo(function Testimonial() {
         <Typography
           element="h1"
           text="Testimonial"
-          className="text-red-600 text-lg md:text-xl font-semibold text-center"
+          className="text-red-800 text-lg md:text-xl font-semibold text-center"
         />
 
         <Typography
@@ -53,7 +53,7 @@ export default memo(function Testimonial() {
           {[1, 2, 3, 4, 5].map((i) => (
             <SwiperSlide key={i}>
               <div className="bg-white mt-14 rounded-md p-6 shadow-[0_3px_10px_rgb(0,0,0,0.1)] relative hover:shadow-[0_5px_20px_rgb(0,0,0,0.15)] transition-all duration-300">
-                <div className="bg-red-500 size-16 rounded-md flex items-center justify-center absolute -top-8 left-6 shadow-lg">
+                <div className="bg-red-800 size-16 rounded-md flex items-center justify-center absolute -top-8 left-6 shadow-lg">
                   <Quote className="text-white size-6" />
                 </div>
 
@@ -66,7 +66,7 @@ export default memo(function Testimonial() {
 
                 {/* User Info */}
                 <div className="flex items-center gap-3 mt-5">
-                  <div className="bg-gray-300 size-12 rounded-full">
+                  <div className="bg-gray-200 size-12 rounded-full">
                     <Image
                       src="/Testimonial/Profile.png"
                       alt="User"
@@ -86,7 +86,7 @@ export default memo(function Testimonial() {
                     <Typography
                       element="p"
                       text="Web Developer"
-                      className="text-sm text-gray-600"
+                      className="text-sm text-gray-800"
                     />
                   </div>
                 </div>

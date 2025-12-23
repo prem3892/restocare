@@ -17,7 +17,10 @@ const Carousel = () => {
   const [showForm, setShowForm] = useState(false);
   return (
     <>
-      <section className="scroll-mt-16 w-full overflow-hidden h-[calc(35vh-4rem)] sm:h-[calc(100vh-4rem)] ">
+      <section
+        className="scroll-mt-16 w-full overflow-hidden h-[calc(35vh-4rem)] sm:h-[calc(100vh-4rem)] "
+        role="banner"
+      >
         {' '}
         {/* mt-16 */}
         <Swiper

@@ -19,7 +19,7 @@ export default memo(function NeedSupport() {
 
           <Typography
             text={NeedSupportData.subHeading}
-            element="h3"
+            element="h2"
             className="font-semibold text-[20px] sm:text-[38px]"
           />
 
