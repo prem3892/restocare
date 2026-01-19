@@ -6,7 +6,7 @@ export const navItems: NavbarType = {
     { label: 'About Us', slug: '/aboutus' },
     { label: 'How It Works', slug: '/howitworks' },
     { label: 'Contact US', slug: '/contact' },
-    { label: 'FAQs', slug: '#' },
+    { label: 'FAQs', slug: '/faq' },
     { label: 'Raise a Ticket', slug: '#' },
   ],
   logo: '/header/logo.png',
