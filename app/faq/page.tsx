@@ -1,8 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
 
 type FAQItem = {
   question: string;
@@ -39,53 +37,29 @@ const faqs: FAQItem[] = [
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-indigo-100 py-16 px-4">
+    <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12 text-gray-900">
-          Frequently Asked Questions
-        </h1>
+        <h1 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h1>
 
-        <div className="space-y-5">
-          {faqs.map((faq, index) => {
-            const isOpen = openIndex === index;
-
-            return (
-              <motion.div
-                key={index}
-                whileHover={{ y: -2 }}
-                className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden"
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-sm">
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none"
               >
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none"
-                >
-                  <span className="text-lg font-medium text-gray-800">{faq.question}</span>
+                <span className="font-medium text-gray-800">{faq.question}</span>
+                <span className="text-xl font-bold">{openIndex === index ? '−' : '+'}</span>
+              </button>
 
-                  <motion.span
-                    animate={{ rotate: isOpen ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <ChevronDown className="w-5 h-5 text-gray-500" />
-                  </motion.span>
-                </button>
-
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.35, ease: 'easeInOut' }}
-                      className="px-6 pb-5 text-gray-600"
-                    >
-                      {faq.answer}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            );
-          })}
+              {openIndex === index && <div className="px-6 pb-4 text-gray-600">{faq.answer}</div>}
+            </div>
+          ))}
         </div>
       </div>
     </div>
