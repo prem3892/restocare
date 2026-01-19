@@ -1,38 +1,8 @@
 'use client';
 
+import { Typography } from '@/typography/typography';
+import { faqs } from '@/variant/faq.variant';
 import { useState } from 'react';
-
-type FAQItem = {
-  question: string;
-  answer: string;
-};
-
-const faqs: FAQItem[] = [
-  {
-    question: 'What is Restocare?',
-    answer:
-      'Restocare is a platform designed to simplify restaurant management, customer care, and service operations.',
-  },
-  {
-    question: 'Who can use Restocare?',
-    answer:
-      'Restocare is ideal for restaurant owners, managers, staff members, and customers looking for a smooth dining experience.',
-  },
-  {
-    question: 'Is Restocare free to use?',
-    answer:
-      'Restocare offers both free and premium plans depending on the features and scale of usage.',
-  },
-  {
-    question: 'Can I manage multiple restaurants?',
-    answer: 'Yes, Restocare supports multi-restaurant management from a single dashboard.',
-  },
-  {
-    question: 'How do I contact support?',
-    answer:
-      'You can reach Restocare support through the contact page or by emailing our support team.',
-  },
-];
 
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -44,7 +14,11 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h1>
+        <Typography
+          element="h1"
+          text="Frequently Asked Questions"
+          className="text-3xl font-bold text-center mb-8"
+        />
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
