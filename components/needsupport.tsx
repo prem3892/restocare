@@ -39,7 +39,14 @@ export default memo(function NeedSupport() {
       </section>
 
       {showForm && (
-        <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
+        <div
+          className="fixed inset-0 bg-black/50 flex justify-center items-center z-50"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              setShowForm(false);
+            }
+          }}
+        >
           <Getintouchform setShowForm={setShowForm} />
         </div>
       )}
